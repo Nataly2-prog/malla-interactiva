@@ -1,1 +1,76 @@
+:root {
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --border: #ced4da;
+  --text: #212529;
+  --primary: #0077b6;
+  --secondary: #495057;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary);
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.semestre {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 320px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.semestre h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.curso {
+  border-left: 4px solid var(--primary);
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #f1f3f5;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.curso:hover {
+  background-color: #e3f2fd;
+}
+
+.curso .nombre {
+  font-weight: bold;
+}
+
+.curso .detalle {
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #dee2e6;
+  font-size: 0.9rem;
+}

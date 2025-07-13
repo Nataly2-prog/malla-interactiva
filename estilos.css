@@ -1,85 +1,24 @@
-:root {
-  --bg: #f1f3f5;
-  --card-bg: #ffffff;
-  --border: #ced4da;
-  --text: #212529;
-  --primary: #1d3557;
-  --secondary: #6c757d;
-  --accent: #457b9d;
-  --shadow: rgba(0, 0, 0, 0.1);
-}
+/* ... los estilos anteriores ... */
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-}
-
-header {
-  text-align: center;
-  background-color: var(--primary);
-  color: white;
-  padding: 1rem;
-  box-shadow: 0 2px 6px var(--shadow);
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #dee2e6;
-  font-size: 0.9rem;
-  color: var(--secondary);
-}
-
-/* Malla en filas tipo columnas de semestres */
-.malla {
-  display: flex;
-  overflow-x: auto;
-  padding: 2rem;
-  gap: 1.5rem;
-}
-
-/* Columna de semestre */
-.semestre {
-  min-width: 280px;
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px var(--shadow);
-  flex-shrink: 0;
-}
-
-.semestre h2 {
-  text-align: center;
-  font-size: 1.1rem;
-  color: var(--accent);
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.5rem;
-}
-
-/* Caja de curso */
 .curso {
   background-color: #e9ecef;
   border-left: 4px solid var(--accent);
   margin-bottom: 0.5rem;
   padding: 0.5rem 0.8rem;
   border-radius: 6px;
-  cursor: default;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: background 0.3s, opacity 0.3s;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
-.curso:hover {
-  background-color: #dbeafe;
+.curso.desbloqueado {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.nombre {
-  font-weight: bold;
-}
-
-.detalle {
-  font-size: 0.85rem;
-  color: var(--secondary);
-  margin-top: 2px;
+.curso.aprobado {
+  text-decoration: line-through;
+  background-color: #c3f0ca;
+  border-left-color: green;
 }
